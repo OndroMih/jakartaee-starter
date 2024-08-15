@@ -25,6 +25,7 @@ jobs:
 
       - name: Build Archetype
         run: mvn clean install --file archetype/pom.xml
+          cat target/classes/archetype-resources/pom.xml
 
       - name: Run Archetype for EE 8, SE 7
         run: |
