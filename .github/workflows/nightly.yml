@@ -19,7 +19,7 @@ jobs:
         run: |
           mvn -B clean install --file archetype/pom.xml
           
-          cat archetype/target/classes/archetype-resources/pom.xml
+          head archetype/target/classes/archetype-resources/pom.xml
           
           bash -c pwd
           

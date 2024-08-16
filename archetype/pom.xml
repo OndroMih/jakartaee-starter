@@ -125,9 +125,9 @@
                         </goals>
                         <configuration>
                             <target>
-                                <replaceregexp match="^\s*(#(if|else|set|elseif|end))" replace="\1" byline="true">
+                                <replace match=" " value="XXX" byline="true">
                                     <fileset dir="${project.build.outputDirectory}/archetype-resources" includes="**/*.java Dockerfile **/*.xml **/*.html"/>
-                                </replaceregexp>
+                                </replace>
                             </target>
                         </configuration>
                     </execution>
