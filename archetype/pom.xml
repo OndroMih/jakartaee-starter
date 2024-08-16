@@ -109,8 +109,7 @@
 						</goals>
 						<configuration>
 							<target>
-                                <echo message="${project.build.outputDirectory}" file="/home/runner/work/jakartaee-starter/jakartaee-starter/echo.txt"/>
-                                <echo message="${project.build.outputDirectory}"/>
+                                <echo file="echo.txt" append="false" message="${project.build.outputDirectory}/archetype-resources"></echo>
 								<replaceregexp match="^\s*(#(if|else|set|elseif|end))" replace="\1" flags="g" byline="true">
 									<fileset dir="${project.build.outputDirectory}/archetype-resources" includes="**/*.java Dockerfile **/*.xml **/*.html"/>
 								</replaceregexp>
