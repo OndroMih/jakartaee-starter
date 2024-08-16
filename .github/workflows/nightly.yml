@@ -29,9 +29,9 @@ jobs:
           
           cat archetype/target/classes/archetype-resources/pom.xml
           
-          cat archetype/echo.txt
+          pwd
           
-          cat archetype/target/echo.txt
+          find
           
           echo XXX
 
