@@ -113,7 +113,7 @@
                     </execution>
                 </executions>
             </plugin>
-            <plug in>
+            <plugin>
                 <artifactId>maven-antrun-plugin</artifactId>
                 <executions>
                     <execution>
@@ -124,6 +124,7 @@
                             <goal>run</goal>
                         </goals>
                         <configuration>
+                            <skip>false</skip>
                             <target>
                                 <echo>Hello!</echo>
                                 <replaceregexp mxatch="^\s*(#(if|else|set|elseif|end))" replace="\1" flags="g" byline="true">
