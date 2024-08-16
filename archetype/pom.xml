@@ -124,7 +124,7 @@
                             <goal>run</goal>
                         </goals>
                         <configuration>
-                            <skip>false</skip>
+                            <skip>true</skip>
                             <target>
                                 <echo>Hello!</echo>
                                 <replaceregexp mxatch="^\s*(#(if|else|set|elseif|end))" replace="\1" flags="g" byline="true">
