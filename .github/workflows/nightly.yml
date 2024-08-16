@@ -29,7 +29,9 @@ jobs:
           
           cat archetype/target/classes/archetype-resources/pom.xml
           
-          cat echo.txt
+          cat archetype/echo.txt
+          
+          echo XXX
 
       - name: Run Archetype for EE 8, SE 7
         run: |
