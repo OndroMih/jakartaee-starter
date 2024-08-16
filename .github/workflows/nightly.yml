@@ -17,7 +17,7 @@ jobs:
 
       - name: Build Archetype
         run: |
-          mvn -B -X clean install -am -pl archetype
+          mvn -B clean install -am -pl archetype
           
           head archetype/target/classes/archetype-resources/pom.xml
           
