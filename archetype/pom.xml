@@ -126,9 +126,9 @@
                         <configuration>
                             <target>
                                 <echo>Hello!</echo>
-                                <replace token=" " value="XXX" byline="true">
+                                <replaceregexp match="^\s*(#(if|else|set|elseif|end))" replace="\1" flags="g" byline="true">
                                     <fileset dir="${project.build.outputDirectory}/archetype-resources" includes="**/*.java Dockerfile **/*.xml **/*.html"/>
-                                </replace>
+                                </replaceregexp>
                             </target>
                         </configuration>
                     </execution>
