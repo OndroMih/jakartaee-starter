@@ -115,13 +115,6 @@
             </plugin>
             <plugin>
                 <artifactId>maven-antrun-plugin</artifactId>
-                <dependencies>
-                    <dependency>
-                        <groupId>ant</groupId>
-                        <artifactId>ant-nodeps</artifactId>
-                        <version>1.6.5</version>
-                    </dependency>
-                </dependencies>
                 <executions>
                     <execution>
                         <!-- Remove leading space from velocity templates -->
@@ -132,7 +125,7 @@
                         </goals>
                         <configuration>
                             <target>
-                                <replaceregexp match="\\s+" replace="" byline="true">
+                                <replaceregexp match="^\s*(#(if|else|set|elseif|end))" replace="\1" byline="true">
                                     <fileset dir="${project.build.outputDirectory}/archetype-resources" includes="**/*.java Dockerfile **/*.xml **/*.html"/>
                                 </replaceregexp>
                             </target>
