@@ -126,7 +126,7 @@
                         <configuration>
                             <target>
                                 <echo message="${project.build.outputDirectory}/archetype-resources"></echo>
-                                <replaceregexp match="^\s*(#(if|else|set|elseif|end))" replace="\1" flags="g" byline="true">
+                                <replaceregexp match="#set" replace="XXX" flags="g" byline="true">
                                     <fileset dir="${project.build.outputDirectory}/archetype-resources" includes="**/*.java Dockerfile **/*.xml **/*.html"/>
                                 </replaceregexp>
                             </target>
