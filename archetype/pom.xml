@@ -98,23 +98,8 @@
                 </executions>
             </plugin>
             <plugin>
-                <groupId>com.github.ekryd.echo-maven-plugin</groupId>
-                <artifactId>echo-maven-plugin</artifactId>
-                <version>1.2.0</version>
-                <executions>
-                    <execution>
-                        <phase>prepare-package</phase>
-                        <goals>
-                            <goal>echo</goal>
-                        </goals>
-                        <configuration>
-                            <message>${project.build.outputDirectory}/archetype-resources</message>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
                 <artifactId>maven-antrun-plugin</artifactId>
+                <version>3.1.0</version>
                 <executions>
                     <execution>
                         <!-- Remove leading space from velocity templates -->
@@ -126,9 +111,8 @@
                         <configuration>
                             <skip>false</skip>
                             <target>
-                                <failOnError>true</failOnError>
                                 <echo>Hello!</echo>
-                                <replaceregexp mxatch="^\s*(#(if|else|set|elseif|end))" replace="\1" flags="g" byline="true">
+                                <replaceregexp match="^\s*(#(if|else|set|elseif|end))" replace="\1" flags="g" byline="true">
                                     <fileset dir="${project.build.outputDirectory}/archetype-resources" includes="**/*.java Dockerfile **/*.xml **/*.html"/>
                                 </replaceregexp>
                             </target>
