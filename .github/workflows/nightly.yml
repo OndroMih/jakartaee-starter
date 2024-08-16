@@ -31,6 +31,8 @@ jobs:
           
           cat archetype/echo.txt
           
+          cat archetype/target/echo.txt
+          
           echo XXX
 
       - name: Run Archetype for EE 8, SE 7
